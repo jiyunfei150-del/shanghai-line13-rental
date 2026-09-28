@@ -8,11 +8,11 @@
   <style>
     :root{--ink:#252336;--muted:#6d6979;--paper:#f8f6fa;--card:#fff;--line:#e8e2ec;--violet:#675d91;--violet-dark:#35304e;--rose:#a75c72;--soft:#f1edf6}
     *{box-sizing:border-box}html{scroll-behavior:smooth}
-    body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.72}
+    body{margin:0;overflow-x:hidden;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.72}
     a{color:#61558f;text-decoration:none}a:hover{text-decoration:underline}
     header{background:linear-gradient(135deg,#302c49 0%,#565078 58%,#8d6076 100%);color:#fff;padding:64px 22px 52px}
     .hero{max-width:1040px;margin:auto}.eyebrow{font-size:14px;letter-spacing:.12em;opacity:.8}.hero h1{margin:10px 0 14px;font-size:clamp(34px,7vw,66px);line-height:1.05;letter-spacing:-.04em}.hero p{max-width:780px;margin:0;color:#ece8f4;font-size:18px}
-    .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.chip{padding:8px 13px;border:1px solid rgba(255,255,255,.25);border-radius:999px;background:rgba(255,255,255,.1);font-size:14px}
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.chip{display:inline-flex;align-items:center;justify-content:center;padding:8px 13px;border:1px solid rgba(255,255,255,.25);border-radius:999px;background:rgba(255,255,255,.1);color:#fff;font-size:14px;text-decoration:none}.chip:hover{background:rgba(255,255,255,.18);text-decoration:none}
     main{max-width:1040px;margin:0 auto;padding:36px 22px 72px}
     main>h1{display:none}h2{margin:40px 0 14px;font-size:28px;line-height:1.25;color:var(--violet-dark)}h3{margin-top:28px;color:var(--violet-dark)}
     p,li{font-size:16px}blockquote{margin:20px 0;padding:14px 18px;border-left:4px solid var(--rose);background:#fff;border-radius:0 12px 12px 0;color:var(--muted)}
@@ -21,7 +21,24 @@
     code{background:var(--soft);padding:.15em .4em;border-radius:5px}strong{color:#423b60}
     .note{margin:28px 0 0;padding:18px 20px;border:1px solid #e3d4dc;border-radius:14px;background:#fff8fa;color:#674655}
     footer{padding:24px;text-align:center;color:var(--muted);border-top:1px solid var(--line);font-size:14px}
-    @media(max-width:720px){header{padding:44px 18px 38px}.hero p{font-size:16px}main{padding:22px 14px 56px}h2{font-size:24px}table{display:block;overflow-x:auto;white-space:normal}th,td{min-width:145px;padding:12px}.chips{gap:8px}.chip{font-size:13px}}
+    .back-top{position:fixed;right:16px;bottom:18px;display:none;width:42px;height:42px;align-items:center;justify-content:center;border-radius:50%;background:var(--violet-dark);color:#fff;box-shadow:0 8px 22px rgba(53,48,78,.28);z-index:10;text-decoration:none}
+    @media(max-width:720px){
+      header{width:100%;padding:34px 16px 28px}.hero{width:100%;min-width:0}.eyebrow{font-size:12px}.hero h1{margin-top:8px;font-size:34px;line-height:1.08}.hero p{max-width:100%;font-size:15px;line-height:1.65;overflow-wrap:anywhere}
+      .chips{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);width:100%;gap:8px;margin-top:20px}.chip{min-width:0;min-height:42px;padding:8px 8px;font-size:13px;text-align:center;white-space:normal;overflow-wrap:anywhere}
+      .note{margin-top:18px;padding:14px 15px;font-size:14px;line-height:1.65}
+      main{width:100%;min-width:0;padding:18px 12px 58px}main *{max-width:100%;overflow-wrap:anywhere}h2{margin:32px 2px 12px;font-size:23px}h3{margin:24px 2px 10px;font-size:19px}p,li{font-size:15px}blockquote{margin:14px 0;padding:12px 14px}
+      table{border-radius:13px}th,td{padding:11px 12px;font-size:14px}
+      table.mobile-cards{display:block;border:0;background:transparent;box-shadow:none;overflow:visible}
+      table.mobile-cards thead{display:none}
+      table.mobile-cards tbody{display:block}
+      table.mobile-cards tr{display:block;margin:0 0 14px;border:1px solid var(--line);border-radius:15px;background:#fff;box-shadow:0 8px 24px rgba(53,48,78,.07);overflow:hidden}
+      table.mobile-cards td{display:block;min-width:0;padding:10px 14px;border:0;border-bottom:1px solid #eeeaf1;color:var(--ink)}
+      table.mobile-cards td:last-child{border-bottom:0}
+      table.mobile-cards td::before{content:attr(data-label);display:block;margin-bottom:3px;color:#7b7488;font-size:11px;font-weight:750;letter-spacing:.05em}
+      table.mobile-cards td:first-child{padding-top:14px;background:linear-gradient(135deg,#f3eff8,#fff);font-size:16px;color:var(--violet-dark)}
+      table.mobile-cards td:first-child::before{color:var(--rose)}
+      ul,ol{padding-left:23px}.back-top{display:flex}
+    }
   </style>
 </head>
 <body>
@@ -29,7 +46,7 @@
     <div class="eyebrow">上海租房复核 · 2026.09.28</div>
     <h1>四档预算升级对比</h1>
     <p>先看原预算能租到什么，再看每月多花约1500元究竟换来了面积、装修、客厅还是通勤。</p>
-    <div class="chips"><span class="chip">世博 ≤ 6000</span><span class="chip">中山公园 ≤ 7500</span><span class="chip">世博 6000–7500</span><span class="chip">中山公园 7500–9000</span></div>
+    <nav class="chips" aria-label="页面导航"><a class="chip" href="#section-2">预算升级对比</a><a class="chip" href="#section-5">原预算首选</a><a class="chip" href="#section-7">加预算备选</a><a class="chip" href="#section-9">四档完整池</a></nav>
     <div class="note"><strong>一句话结论：</strong>世博路线加预算提升明显；中山公园通勤圈加预算主要换装修，并没有换来更大空间。</div>
   </div></header>
   <main><h1 id="section">上海租房四档复核清单（2026-09-28）</h1>
@@ -419,6 +436,22 @@
 <h2 id="section-16">证据边界</h2>
 <p>这是一份<strong>证据可追溯的复核清单，不是“全部在租房源”或最终Top20</strong>。网页显示“随时入住”不等于中介确认未被预订；高德以小区POI为起点，不等于具体楼栋门口；中介费和佣金没有明确的，不冒充已计入总价。付定金前仍需把在租状态、具体楼层、民水民电和全部费用做最后书面确认。</p>
 </main>
+  <a class="back-top" href="#top" aria-label="返回顶部">↑</a>
   <footer>房源变化很快；约看前请再次确认在租状态、全部月费、具体楼层及民水民电并写入合同。</footer>
+  <script>
+    document.querySelectorAll('main table').forEach((table) => {
+      const labels = Array.from(table.querySelectorAll('thead th')).map((cell) => cell.textContent.trim());
+      if (labels.length < 3) return;
+      table.classList.add('mobile-cards');
+      table.querySelectorAll('tbody tr').forEach((row) => {
+        Array.from(row.children).forEach((cell, index) => {
+          cell.dataset.label = labels[index] || '信息';
+        });
+      });
+    });
+    if (location.hash) {
+      requestAnimationFrame(() => document.querySelector(location.hash)?.scrollIntoView());
+    }
+  </script>
 </body>
 </html>
