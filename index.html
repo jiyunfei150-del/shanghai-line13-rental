@@ -6,48 +6,66 @@
   <meta name="description" content="上海13号线两房租房最终排名，含高德通勤、民水民电、楼层、装修与客厅核查。">
   <title>上海13号线两房租房最终版｜2026-09-28</title>
   <style>
-    :root{--ink:#172036;--sub:#667085;--line:#d9deea;--paper:#f5f6fa;--card:#fff;--navy:#18233f;--indigo:#5364d8;--soft:#eef0ff;--danger:#96384a}
+    :root{--ink:#242535;--sub:#6d6d7c;--line:#e3e0ea;--paper:#f7f5f2;--card:#fff;--navy:#2f3048;--indigo:#6662b8;--soft:#f0eef9;--lavender:#dedaf1;--danger:#96384a}
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7}
-    a{color:#4053bd;text-decoration:none}a:hover{text-decoration:underline}
-    header{background:linear-gradient(135deg,#111a31,#293961);color:#fff;padding:44px 0 38px}
-    .hero,.content{width:min(100% - 32px,1040px);margin:auto}
-    .eyebrow{font-size:13px;letter-spacing:.12em;color:#c8cff6}
-    h1.hero-title{font-size:clamp(32px,6vw,54px);line-height:1.08;margin:12px 0 14px;color:#fff;border:0;padding:0}
-    .hero p{margin:0;color:#dce0f1;font-size:16px}
-    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:25px}
-    .stat{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.07);padding:13px 15px;border-radius:12px}
-    .stat b{display:block;font-size:23px}.stat span{font-size:12px;color:#d6daeb}
-    .content{background:#fff;margin-top:24px;padding:28px 34px 44px;border:1px solid var(--line);border-radius:16px;box-shadow:0 5px 24px rgba(28,38,72,.06)}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.72}
+    a{color:#5653a5;text-decoration:none}a:hover{text-decoration:underline}
+    header{position:relative;overflow:hidden;padding:54px 0 32px;background:linear-gradient(150deg,#f8f6f2 0%,#f0edf7 58%,#e9e7f2 100%);border-bottom:1px solid var(--line)}
+    header::before{content:"";position:absolute;width:430px;height:430px;border-radius:50%;right:-150px;top:-230px;background:rgba(102,98,184,.12);filter:blur(2px)}
+    header::after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;left:-150px;bottom:-190px;background:rgba(120,116,170,.09)}
+    .hero,.content{width:min(100% - 36px,1040px);margin:auto}
+    .hero{position:relative;z-index:1}
+    .hero-top{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:42px;align-items:end}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.13em;color:#696684;text-transform:uppercase}
+    .eyebrow::before{content:"";width:22px;height:1px;background:#7773b6}
+    h1.hero-title{font-size:clamp(34px,5.4vw,58px);font-weight:760;letter-spacing:-.04em;line-height:1.08;margin:15px 0 16px;color:var(--ink);border:0;padding:0}
+    .hero-summary{margin:0;color:#666575;font-size:15px;max-width:650px}
+    .hero-note{padding:17px 18px;border:1px solid rgba(102,98,184,.2);border-radius:15px;background:rgba(255,255,255,.62);backdrop-filter:blur(8px);box-shadow:0 8px 30px rgba(70,66,110,.06)}
+    .hero-note b{display:block;font-size:13px;color:#4e4a7e;margin-bottom:6px}.hero-note span{display:block;color:#777585;font-size:12px;line-height:1.65}
+    .criteria{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+    .chip{padding:7px 11px;border:1px solid #d8d4e4;border-radius:999px;background:rgba(255,255,255,.66);color:#585767;font-size:12px;white-space:nowrap}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:28px;border:1px solid #dcd8e5;border-radius:14px;overflow:hidden;background:#dcd8e5}
+    .stat{display:flex;align-items:baseline;gap:8px;background:rgba(255,255,255,.82);padding:12px 15px}
+    .stat b{font-size:20px;color:#514e8f}.stat span{font-size:11px;color:#777585}
+    .content{background:#fff;margin-top:24px;padding:32px 40px 50px;border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 40px rgba(55,50,75,.055)}
     .content>h1:first-child{display:none}
     h1,h2,h3{line-height:1.35;scroll-margin-top:18px}
-    h2{font-size:25px;margin:38px 0 14px;padding-bottom:9px;border-bottom:2px solid #e7e9f4}
-    h3{font-size:19px;margin:28px 0 12px;padding:12px 15px;background:var(--soft);border-left:4px solid var(--indigo);border-radius:8px}
+    h2{font-size:24px;margin:42px 0 16px;padding-bottom:10px;border-bottom:1px solid var(--line);letter-spacing:-.02em}
+    h2::before{content:"";display:inline-block;width:7px;height:7px;margin:0 10px 3px 1px;border-radius:50%;background:#6b67b4}
+    h3{font-size:19px;margin:30px 0 12px;padding:14px 16px;background:linear-gradient(90deg,#f2f0f8,#faf9fc);border:1px solid #e5e1ee;border-radius:11px;color:#39384c}
     p{margin:10px 0;color:#465168}
-    blockquote{margin:0 0 22px;padding:14px 17px;background:#f0f2f9;border-left:4px solid var(--indigo);border-radius:9px;color:#3f4961}
+    blockquote{margin:0 0 25px;padding:17px 19px;background:#f3f1f7;border:1px solid #e2deea;border-radius:12px;color:#4f4d62}
     blockquote p{margin:0;color:inherit}
     strong{color:#202a43}
     ul,ol{padding-left:23px}li{margin:5px 0;color:#465168}
     table{display:block;width:100%;overflow-x:auto;border-collapse:collapse;margin:14px 0 22px;font-size:13px;white-space:nowrap}
-    thead{background:#eceff7}th{color:#27324b}
+    thead{background:#f0eef5}th{color:#3e3d51}
     th,td{padding:10px 11px;border:1px solid var(--line);text-align:left;vertical-align:top}
-    tbody tr:nth-child(even){background:#fafbfe}
+    tbody tr:nth-child(even){background:#faf9fc}
     .photo-link{display:block;margin:13px 0 18px;width:min(100%,680px)}
-    .photo-link img{display:block;width:100%;max-height:440px;object-fit:cover;border-radius:12px;background:#e9ebf3;box-shadow:0 3px 12px rgba(25,35,68,.12)}
+    .photo-link img{display:block;width:100%;max-height:440px;object-fit:cover;border-radius:14px;background:#eceaf0;box-shadow:0 5px 18px rgba(45,42,65,.12)}
     hr{border:0;border-top:1px solid var(--line);margin:30px 0}
     footer{width:min(100% - 32px,1040px);margin:20px auto 38px;color:var(--sub);font-size:12px;text-align:center}
-    .toplink{position:fixed;right:18px;bottom:18px;width:42px;height:42px;display:grid;place-items:center;background:var(--navy);color:#fff;border-radius:50%;box-shadow:0 4px 18px rgba(18,27,52,.22);font-size:18px}
+    .toplink{position:fixed;right:18px;bottom:18px;width:42px;height:42px;display:grid;place-items:center;background:#5f5b9d;color:#fff;border-radius:50%;box-shadow:0 5px 18px rgba(56,52,90,.22);font-size:18px}
     .toplink:hover{text-decoration:none}
-    @media(max-width:720px){header{padding:32px 0 28px}.stats{grid-template-columns:repeat(2,1fr)}.content{width:100%;margin-top:0;border-radius:0;border-left:0;border-right:0;padding:22px 17px 38px}.hero{width:min(100% - 28px,1040px)}h2{font-size:22px;margin-top:32px}h3{font-size:17px}.photo-link{width:100%}table{font-size:12px}.toplink{right:12px;bottom:12px}}
+    @media(max-width:720px){header{padding:34px 0 24px}.hero-top{grid-template-columns:1fr;gap:18px}.hero-note{padding:14px 15px}.criteria{margin-top:17px}.stats{grid-template-columns:repeat(2,1fr);margin-top:20px}.stat{padding:10px 12px}.content{width:100%;margin-top:0;border-radius:0;border-left:0;border-right:0;padding:23px 17px 40px}.hero{width:min(100% - 28px,1040px)}h2{font-size:21px;margin-top:34px}h3{font-size:17px;padding:12px 13px}.photo-link{width:100%}table{font-size:12px}.toplink{right:12px;bottom:12px}}
   </style>
 </head>
 <body id="top">
   <header>
     <div class="hero">
-      <div class="eyebrow">上海租房核查 · 2026.09.28</div>
-      <h1 class="hero-title">13号线两房<br>最终候选清单</h1>
-      <p>内容与 Markdown 最终版保持一致 · 高德通勤实测 · 硬门槛与待确认项分开标注</p>
+      <div class="hero-top">
+        <div>
+          <div class="eyebrow">Shanghai Rental Shortlist · 2026.09.28</div>
+          <h1 class="hero-title">13号线两房租房清单</h1>
+          <p class="hero-summary">不是房源堆砌，而是一份按通勤、居住条件和装修质量逐项核过的约看优先级。</p>
+        </div>
+        <div class="hero-note"><b>本轮结论</b><span>暂时没有一套同时满足全部硬条件和理想装修。排名代表“最值得继续核实”，不是无条件推荐。</span></div>
+      </div>
+      <div class="criteria">
+        <span class="chip">≤ 6000元</span><span class="chip">≥ 57㎡</span><span class="chip">两室一厅</span><span class="chip">不朝北</span><span class="chip">民水民电</span><span class="chip">指定站步行 ≤ 1km</span><span class="chip">骑阅文 ≤ 6km</span><span class="chip">楼层受限</span>
+      </div>
       <div class="stats">
         <div class="stat"><b>10</b><span>最终排名候选</span></div>
         <div class="stat"><b>3</b><span>平台合计核查</span></div>
